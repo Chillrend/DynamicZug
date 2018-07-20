@@ -98,14 +98,10 @@ public class railPassInvoiceM extends HttpServlet {
                     ClassLoader cl = getClass().getClassLoader();
                     URL url = cl.getResource("resource/reiseticket"+konter+".pdf");
 
-                    try {
+                   
                         reader = new PdfReader(cl.getResource("resource/reiseticket"+konter+".pdf"));
                         stamper = new PdfStamper(reader,streamToResponse);
-                    }catch(IOException iox){
-                        iox.printStackTrace();
-                    }catch(DocumentException docx){
-                        docx.printStackTrace();
-                    }
+                  
                     AcroFields form =  stamper.getAcroFields();
 
                     form.setField("uuid",suuide);
