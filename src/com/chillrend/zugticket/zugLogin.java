@@ -96,6 +96,7 @@ public class zugLogin extends HttpServlet {
                 }
                 HttpSession session = request.getSession();
                 session.setAttribute("username", uname);
+                session.setAttribute("role", role);
                 session.setMaxInactiveInterval(1500);
             }else{
                 response.setContentType("text/html");

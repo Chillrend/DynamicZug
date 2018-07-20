@@ -8,9 +8,9 @@
      $('#bquote').hide();
      $('select[name=htm]').change(function() {
         if($('select[name=htm] option:nth(5)').is(':selected')){
-         $('#bquote').fadeIn('slow');
+//         $('#bquote').fadeIn('slow');
      }else{
-         $('#bquote').fadeOut('slow');
+//         $('#bquote').fadeOut('slow');
      }
      // Tooltips Initialization
     $("body").tooltip({ selector: '[data-toggle=tooltip]' });
@@ -45,6 +45,8 @@ var datezthreemonth = new Date();
 datezthreemonth.setMonth(new Date().getMonth() + 3);
 
 $('.datepicker').pickadate({
+    format: 'yyyy-mm-dd',
+    formatSubmit: 'yyyy-mm-dd',
     min: new Date(),
     max: datezthreemonth,
 });

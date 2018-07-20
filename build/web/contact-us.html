@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deutsche Bahn - Contact-us</title>
+    <link rel="stylesheet" href="source/css/main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="source/css/mdb.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top black-text bg-faded scrolling-navbar">
+        <div class="container"> <a class="navbar-brand" href="index.html"><img src="source/image/30%20dblogo.png" height="30" alt="" class="d-inline-block align-top"> Deutsche Bahn </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"> <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span> </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="features.html">Facilities</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="index.html#searchtik">Book Ticket</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact Us</a> </li>
+                </ul>
+                <div class="text-center"> <a href="" class="btn btn-danger btn-rounded" data-toggle="modal" data-target="#darkModalForm">Sign In</a> </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row mt-5"></div>
+        <!-- Section: Contact v.1 -->
+        <section class="my-5 mt-5">
+
+            <!-- Section heading -->
+            <h2 class="h1-responsive font-weight-bold text-center my-5">Contact us</h2>
+            <!-- Section description -->
+            <p class="text-center w-responsive mx-auto pb-5">If you have inquiries about our services please dont hesitate to fill this form, or visit us at below address.</p>
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-lg-5 mb-lg-0 mb-4">
+                    <form action="">
+                        <div class="md-form">
+                            <input type="text" class="form-control" id="inputfname" required>
+                            <label for="inputfname">Name</label>
+                        </div>
+                        <div class="md-form">
+                            <input type="email" class="form-control" id="inputemail" required>
+                            <label for="inputemail">E-Mail</label>
+                        </div>
+                        <div class="md-form">
+                            <textarea type="text" id="textareaBasic" class="form-control md-textarea" rows="3" required></textarea>
+                            <label for="textareaBasic">Your Messages</label>
+                        </div>
+                        <button class="btn btn-danger" type="submit">Submit</button>
+                    </form>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-7">
+
+                    <!-- Google map-->
+                    <div id="map-container" class="rounded z-depth-1-half map-container" style="height: 400px">
+                        <div class="mapouter">
+                            <div class="gmap_canvas"><iframe width="635" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Europa Platz 1, Berlin&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Buttons-->
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <a class="btn-floating red accent-1">
+                            <i class="fa fa-map-marker"></i></a>
+                            <p>Europa Platz 1, Berlin</p>
+                            <p class="mb-md-0">Germany</p>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="btn-floating red accent-1">
+            <i class="fa fa-phone"></i>
+          </a>
+                            <p>+ 01 234 567 89</p>
+                            <p class="mb-md-0">Mon - Fri, 8:00-22:00</p>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="btn-floating red accent-1">
+            <i class="fa fa-envelope"></i>
+          </a>
+                            <p class="mb-0">reiseportal@bahn.de</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </section>
+        <!-- Section: Contact v.1 -->
+
+    </div>
+    <!--Table-->
+    <footer class="page-footer font-small unique-color-dark pt-0">
+        <div style="background-color: #F44336;">
+            <div class="container">
+                <!--Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+                    <!--Grid column-->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0 white-text">Get connected with us on social networks!</h6>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+                        <!--Facebook--><a class="fb-ic ml-0"> <i class="fa fa-facebook white-text mr-lg-4"> </i> </a>
+                        <!--Twitter--><a class="tw-ic"> <i class="fa fa-twitter white-text mr-lg-4"> </i> </a>
+                        <!--Google +--><a class="gplus-ic"> <i class="fa fa-google-plus white-text mr-lg-4"> </i> </a>
+                        <!--Linkedin--><a class="li-ic"> <i class="fa fa-linkedin white-text mr-lg-4"> </i> </a>
+                        <!--Instagram--><a class="ins-ic"> <i class="fa fa-instagram white-text mr-lg-4"> </i> </a> </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+        </div>
+        <!--Footer Links-->
+        <div class="container mt-5 mb-4 text-center text-md-left">
+            <div class="row mt-3">
+                <!--First column-->
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                    <h6 class="text-uppercase font-weight-bold"> <img src="source/image/30%20dblogo.png" height="30" alt="" class="d-inline-block">&nbsp;&nbsp;<strong>Deutsche Bahn</strong> </h6>
+                    <p></p>
+                </div>
+                <!--/.First column-->
+                <!--Second column-->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold"> <strong>Products</strong> </h6>
+                    <hr class="danger-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p> <a href="#!">BahnPass</a> </p>
+                    <p> <a href="features.html">First Class</a> </p>
+                    <p> <a href="#">Bussiness</a> </p>
+                </div>
+                <!--/.Second column-->
+                <!--Third column-->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold"> <strong>Useful links</strong> </h6>
+                    <hr class="danger-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p> <a href="" data-toggle="modal" data-target="#darkModalForm">Login</a> </p>
+                    <p> <a href="index.html#searchtik">Book a Ticket</a> </p>
+                    <p> <a href="#">Bahn Pass</a> </p>
+                    <p> <a href="contact-us.html">Contact Us</a> </p>
+                </div>
+                <!--/.Third column-->
+                <!--Fourth column-->
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h6 class="text-uppercase font-weight-bold"> <strong>Contact</strong> </h6>
+                    <hr class="danger-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p> <i class="fa fa-home mr-3"></i> Europa Platz 1 Berlin, Germany</p>
+                    <p> <i class="fa fa-envelope mr-3"></i> reiseportal@bahn.de</p>
+                    <p> <i class="fa fa-phone mr-3"></i> + 49-30-297-640-31</p>
+                    <p> <i class="fa fa-print mr-3"></i> + 49-69-265-201-10</p>
+                </div>
+                <!--/.Fourth column-->
+            </div>
+        </div>
+        <!--/.Footer Links-->
+        <!-- Copyright-->
+        <div class="footer-copyright py-3 text-center">Best viewed with 1366x768px Display Resolution <br /> © 2018 Copyright: <a> <strong> Deutsche Bahn AG</strong> </a> </div>
+        <!--/.Copyright -->
+    </footer>
+    <!--/.Footer-->
+    <!--MODAL-->
+    <div class="modal fade" id="darkModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog form-dark" role="document">
+            <!--Content-->
+            <div class="modal-content card card-image">
+                <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+                    <!--Header-->
+                    <div class="modal-header text-center pb-4">
+                        <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel"><strong>SIGN</strong> <a class="red-text font-weight-bold"><strong> IN</strong></a></h3> <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                        <!--Body-->
+                        <div class="md-form mb-5"> <input type="email" id="Form-email5" class="form-control validate white-text"> <label data-error="Incorrect" data-success="Sounds Good!" for="Form-email5">Your email</label> </div>
+                        <div class="md-form pb-3"> <input type="password" id="Form-pass5" class="form-control validate white-text"> <label data-error="" data-success="" for="Form-pass5">Your password</label>
+                            <div class="form-group mt-4"> <input type="checkbox" id="checkbox624"> <label for="checkbox624" class="white-text">Remember me</label> </div>
+                        </div>
+                        <!--Grid row-->
+                        <div class="row d-flex align-items-center mb-4">
+                            <!--Grid column-->
+                            <div class="text-center mb-3 col-md-12"> <button type="button" class="btn btn-danger btn-block btn-rounded z-depth-1">Sign in</button> </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                        <!--Grid row-->
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-md-12">
+                                <p class="font-small white-text d-flex justify-content-end"> Don't Have an account? <a href="sign-up.html" class="red-text ml-1 font-weight-bold"> Sign Up</a></p>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="source/js/mdb.min.js" type="text/javascript"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="source/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="full-height">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deutsche Bahn - Home</title>
+    <link rel="stylesheet" href="source/css/index.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="source/css/mdb.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Main navigation -->
+    <header>
+        <!--Navbar-->
+        <strong>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar black-text">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="source/image/30%20dblogo.png" height="30" alt="" class="d-inline-block align-top"> Deutsche Bahn </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#searchtik">Book Ticket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact-us</a>
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <a href="" class="btn btn-danger btn-rounded" data-toggle="modal" data-target="#darkModalForm">Sign In</a>
+                </div>
+            </div>
+        </nav> 
+        </strong>
+        <!-- Navbar -->
+        <!-- Full Page Intro -->
+        <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('http://www.finnmoller.dk/rail-de/143/db143569.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-white-light d-flex justify-content-center align-items-center">
+                <!-- Content -->
+                <div class="container">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md-12 white-text text-center">
+                            <h1 class="display-3 mb-0 pt-md-5 pt-5 white-text font-weight-bold wow fadeInDown" data-wow-delay="0.3s">Deutsche <a class="red-text font-weight-bold">Bahn</a> </h1>
+                            <h5 class="text-uppercase pt-md-5 pt-sm-2 pt-5 pb-md-5 pb-sm-3 pb-5 white-text font-weight-bold wow fadeInDown" data-wow-delay="0.3s">Ihre Sicherheit ist unser Priorität</h5>
+                            <div class="wow fadeInDown" data-wow-delay="0.3s"> <a class="btn btn-red btn-lg">Reserve a Ticket</a> <a class="btn btn-white btn-lg">Railpass</a> </div>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+        </div>
+        <!-- Full Page Intro -->
+    </header>
+    <!-- Main navigation -->
+    <!--Main Navigation-->
+    <!--Main Layout-->
+    <main class="text-center py-5 mt-3">
+        <div class="container overlap-header">
+            <form action="book.html" class="md-form pr-3 pl-3" onsubmit="return valindex()" novalidate>
+                <div class="row">
+                    <div class="col">
+                        <h3 id="searchtik">Search a Ticket</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <select class="mdb-select" id="route" name="route" required>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="clt-msw">Cilebut-Moscow</option>
+                            <option value="nmo-lod">Nambo-London</option>
+                            <option value="cta-frf">Citayam-Frankfurt</option>
+                        </select>
+                        <label>Select a Route</label>
+                    </div>
+                    <div class="col">
+                        <select class="mdb-select" id="st_from" name="st_from" required>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="cilebut">Cilebut</option>
+                            <option value="nambo">Nambo</option>
+                            <option value="citayam">Citayam</option>
+                        </select>
+                        <label>From Station</label>
+                    </div>
+                    <div class="col">
+                        <select class="mdb-select" id="st_to" name="st_to" required>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="moscow">Moscow</option>
+                            <option value="london">London</option>
+                            <option value="frankfurt">Frankfurt</option>
+                        </select>
+                        <label>To Station</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-3">
+                        <select class="mdb-select" name="htm" id="htm" required>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passenger</option>
+                            <option value="3">3 Passenger</option>
+                            <option value="4">4 Passenger</option>
+                            <option value="">More than 4 Passenger</option>
+                        </select>
+                        <label>Passenger</label>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input placeholder="Selected date" type="text" id="tanggal_berangkat" class="form-control datepicker">
+                            <label for="date-picker-example">Date of Departure</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-flat btn-lg">Search Trains</button>
+                    </div>
+                </div>
+                <div id="bquote" class="row">
+                    <blockquote class="blockquote bq-success">
+                        <p class="bq-title">Booking more than 4 Passenger ?</p>
+                        <p>To prevent calo from using our online ticketing service, we limit to only 4 passenger per booking, if you want to book a ticket for more than 4 passenger, please go to nearest DB Station and ask the officer there.</p>
+                    </blockquote>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- Section: Products v.4 -->
+    <div class="view jarallax intro-2" data-jarallax='{"speed": 0.2}' style="background-image: url(source/image/4k_material_red_light-wallpaper-1440x900.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div class="mask rgba-white-slight">
+            <div class="container">
+                <section class="text-center my-5">
+                    <!-- Section heading -->
+                    <h2 class="h1-responsive font-weight-bold text-center my-5">Bahn Pass</h2>
+                    <!-- Section description -->
+                    <p class="h5-responsive text-center w-responsive mx-auto mb-5" style="font-weight: 200;">Book your Bahn Pass for unlimited train rides for a period of time !</p>
+                    <!-- Grid row -->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+                            <!-- Collection card -->
+                            <div class="card collection-card z-depth-1-half">
+                                <!-- Card image -->
+                                <div class="view zoom"> <img src="source/image/ice_train.jpg" class="img-fluid" alt="">
+                                    <div class="stripe red">
+                                        <a>
+                                            <p>ICE Bahn Pass <i class="fa fa-angle-right"></i> </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Card image -->
+                            </div>
+                            <!-- Collection card -->
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+                            <!-- Collection card -->
+                            <div class="card collection-card z-depth-1-half">
+                                <!-- Card image -->
+                                <div class="view zoom"> <img src="source/image/hamburg_train.jpg" class="img-fluid" alt="">
+                                    <div class="stripe white">
+                                        <a>
+                                            <p>Hamburg Pass <i class="fa fa-angle-right"></i> </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Card image -->
+                            </div>
+                            <!-- Collection card -->
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-lg-3 col-md-6 mb-md-0 mb-4">
+                            <!-- Collection card -->
+                            <div class="card collection-card z-depth-1-half">
+                                <!-- Card image -->
+                                <div class="view zoom"> <img src="source/image/berlin_train.jpg" class="img-fluid" alt="">
+                                    <div class="stripe red">
+                                        <a>
+                                            <p>Berlin Pass <i class="fa fa-angle-right"></i> </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Card image -->
+                            </div>
+                            <!-- Collection card -->
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Fourth column -->
+                        <div class="col-lg-3 col-md-6">
+                            <!-- Collection card -->
+                            <div class="card collection-card z-depth-1-half">
+                                <!-- Card image -->
+                                <div class="view zoom"> <img src="source/image/allroute_train.jpg" class="img-fluid" alt="">
+                                    <div class="stripe white">
+                                        <a>
+                                            <p>All-route Pass <i class="fa fa-angle-right"></i> </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Card image -->
+                            </div>
+                            <!-- Collection card -->
+                        </div>
+                        <!-- Fourth column -->
+                    </div>
+                    <!-- Grid row -->
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Section: Products v.4 -->
+    <div class="container">
+        <!-- Projects section v.4 -->
+        <section class="text-center my-5">
+            <!-- Section heading -->
+            <h2 class="h1-responsive font-weight-bold text-center my-5">Our costumer is our priority</h2>
+            <!-- Section description -->
+            <p class="grey-text text-center w-responsive mx-auto mb-5">Customer must be a number one priority to achieve our service achievement.</p>
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-12 mb-4">
+                    <div class="card card-image" style="background-image: url(http://thekindtips.com/wp-content/uploads/Customer-Service-Tips-for-Ending-a-Phone-Call.jpeg);">
+                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                            <div>
+                                <h6 class="red-text"> <i class="fa fa-phone"></i> <strong> Customer Service</strong> </h6>
+                                <h3 class="py-3 font-weight-bold"> <strong>Bahn Dedicated Service Line</strong> </h3>
+                                <p class="pb-3">DB Offer number on quality service center ! If you want to book a ticket, check your booking status, or have a problem regarding our train services, feel free to contact us by clicking the button below! </p> <a href="contact-us.html" class="btn btn-danger btn-rounded btn-md"><i class="fa fa-clone left"></i> Contact us</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-6 mb-md-0 mb-4">
+                    <div class="card card-image" style="background-image: url(http://farm8.staticflickr.com/7255/7031719473_4aa60973e9.jpg);">
+                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                            <div>
+                                <h6 class="red-text"> <i class="fa fa-hourglass"></i> <strong> Timeliness</strong> </h6>
+                                <h3 class="py-3 font-weight-bold"> <strong>Zero Time Punctuation</strong> </h3>
+                                <p class="pb-3">We offer a refund if a train is delayed, cancelled, or you missed a connecting train</p> <a href="claim.html" class="btn btn-danger btn-rounded btn-md"><i class="fa fa-clone left"></i> Refund</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-6">
+                    <div class="card card-image" style="background-image: url(http://www.railjournal.com/images/ICE4-int4.jpg);">
+                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                            <div>
+                                <h6 class="red-text"> <i class="fa fa-bed"></i> <strong> Comfort</strong></h6>
+                                <h3 class="py-3 font-weight-bold"> <strong>First Class Service</strong></h3>
+                                <p class="pb-3">First class airplane like service, offer you a comfortable ride on even twelve-hours train ride. Experience Top-class service with DB. </p> <a href="features.html" class="btn btn-danger btn-rounded btn-md"><i class="fa fa-clone left"></i> First Class Facility</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </section>
+        <!-- Projects section v.4 -->
+    </div>
+    <footer class="page-footer font-small unique-color-dark pt-0">
+        <div style="background-color: #F44336;">
+            <div class="container">
+                <!--Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+                    <!--Grid column-->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0 white-text">Get connected with us on social networks!</h6>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+                        <!--Facebook--><a class="fb-ic ml-0"> <i class="fa fa-facebook white-text mr-lg-4"> </i> </a>
+                        <!--Twitter--><a class="tw-ic"> <i class="fa fa-twitter white-text mr-lg-4"> </i> </a>
+                        <!--Google +--><a class="gplus-ic"> <i class="fa fa-google-plus white-text mr-lg-4"> </i> </a>
+                        <!--Linkedin--><a class="li-ic"> <i class="fa fa-linkedin white-text mr-lg-4"> </i> </a>
+                        <!--Instagram--><a class="ins-ic"> <i class="fa fa-instagram white-text mr-lg-4"> </i> </a> </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+        </div>
+        <!--Footer Links-->
+        <div class="container mt-5 mb-4 text-center text-md-left">
+            <div class="row mt-3">
+                <!--First column-->
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                    <h6 class="text-uppercase font-weight-bold"> <img src="source/image/30%20dblogo.png" height="30" alt="" class="d-inline-block">&nbsp;&nbsp;<strong>Deutsche Bahn</strong> </h6>
+                    <p></p>
+                </div>
+                <!--/.First column-->
+                <!--Second column-->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold"> <strong>Products</strong> </h6>
+                    <hr class="danger-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p> <a href="#!">BahnPass</a> </p>
+                    <p> <a href="features.html">First Class</a> </p>
+                    <p> <a href="#">Bussiness</a> </p>
+                </div>
+                <!--/.Second column-->
+                <!--Third column-->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold"> <strong>Useful links</strong> </h6>
+                    <hr class="danger-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p> <a href="" data-toggle="modal" data-target="#darkModalForm">Login</a> </p>
+                    <p> <a href="index.html#searchtik">Book a Ticket</a> </p>
+                    <p> <a href="#">Bahn Pass</a> </p>
+                    <p> <a href="contact-us.html">Contact Us</a> </p>
+                </div>
+                <!--/.Third column-->
+                <!--Fourth column-->
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h6 class="text-uppercase font-weight-bold"> <strong>Contact</strong> </h6>
+                    <hr class="danger-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p> <i class="fa fa-home mr-3"></i> Europa Platz 1 Berlin, Germany</p>
+                    <p> <i class="fa fa-envelope mr-3"></i> reiseportal@bahn.de</p>
+                    <p> <i class="fa fa-phone mr-3"></i> + 49-30-297-640-31</p>
+                    <p> <i class="fa fa-print mr-3"></i> + 49-69-265-201-10</p>
+                </div>
+                <!--/.Fourth column-->
+            </div>
+        </div>
+        <!--/.Footer Links-->
+        <!-- Copyright-->
+        <div class="footer-copyright py-3 text-center">Best viewed with 1366x768px Display Resolution <br /> © 2018 Copyright: <a> <strong> Deutsche Bahn AG</strong> </a> </div>
+        <!--/.Copyright -->
+    </footer>
+    <!--/.Footer-->
+    <!--MODAL-->
+    <div class="modal fade" id="darkModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog form-dark" role="document">
+            <!--Content-->
+            <div class="modal-content card card-image">
+                <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+                    <!--Header-->
+                    <div class="modal-header text-center pb-4">
+                        <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel"><strong>SIGN</strong> <a class="red-text font-weight-bold"><strong> IN</strong></a></h3> <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                       
+                        <!--Body-->
+                        <div class="md-form mb-5">
+                            <input type="email" class="form-control white-text" id="mael" required>
+                            <label for="Form-email5">Your email</label>
+                        </div>
+                        <div class="md-form pb-3">
+                           <input type="password" class="form-control white-text" id="pwd">
+                           <label for="Form-pass5">Your password</label>
+                           <div class="form-group mt-4">
+                               <input type="checkbox" id="checkbox624">
+                               <label for="checkbox624" class="white-text">Remember me</label>
+                           </div>
+                        </div>
+                        <!--Grid row-->
+                        <div class="row d-flex align-items-center mb-4">
+                            <!--Grid column-->
+                            <div class="text-center mb-3 col-md-12">
+                                <a onclick="return cykablyat()" id="sign-btn" name="sign-btn" class="btn btn-danger btn-block btn-rounded z-depth-1">Sign in</a>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        </form>
+                        <!--Grid row-->
+                        <!--Grid row-->
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-md-12">
+                                <p class="font-small white-text d-flex justify-content-end"> Don't Have an account? <a href="sign-up.html" class="red-text ml-1 font-weight-bold"> Sign Up</a></p>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Modal -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="source/js/mdb.min.js" type="text/javascript"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="source/js/main.js"></script>
+</body>
+
+</html>

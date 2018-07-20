@@ -44,7 +44,7 @@ public class railpass extends HttpServlet {
         sess.setAttribute("dateStart", dateStart);
         sess.setAttribute("passName", passName);
         sess.setAttribute("countryOrigin", countryOrigin);
-
+            sess.setAttribute("htm", 1);
         try{
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/trendb","akar","akarpohon");
@@ -56,7 +56,7 @@ public class railpass extends HttpServlet {
 
             while(rs.next()){
                 price = rs.getString(1);
-            }
+}
             ResultSet res = stat.executeQuery("SELECT name FROM user WHERE username='" + (String) sess.getAttribute("username") + "';");
         }catch (Exception i){
             i.printStackTrace();
@@ -69,6 +69,7 @@ public class railpass extends HttpServlet {
                 }
             }
             request.setAttribute("price", price);
+            request.setAttribute("htm", 1);
             String nextResponse = "/payment.jsp";
             getServletContext().getRequestDispatcher(nextResponse).forward(request,response);
         }

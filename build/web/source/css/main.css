@@ -1,0 +1,59 @@
+nav a{
+    color: #000 !important;
+}
+nav{
+    background-color: #FFF !important;
+}
+.form-elegant .font-small {
+    font-size: 0.8rem; }
+
+.form-elegant .z-depth-1a {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+
+.form-elegant .modal-header {
+    border-bottom: none; }
+
+.modal-dialog .form-elegant .btn .fa {
+    color: #2196f3!important; }
+
+.form-elegant .modal-body, .form-elegant .modal-footer {
+    font-weight: 400; }
+.chip.chip-lg {
+    height: 52px;
+    line-height: 52px;
+    border-radius: 26px;
+}
+.blockquote .bq-title{
+    font-size: 1rem !important;
+}
+.blockquote p{
+    font-size: 1rem !important;
+}
+.md-form input:focus:required:invalid{
+    border-bottom-color: #F44336 !important;
+}
+.justify{
+    text-align: justify;
+    text-justify: inter-word;
+}
+.tab-pane h5{
+    font-weight: 500;
+}
+.avatar-pic {
+    width: 200px;
+    height: 200px;
+}
+.card{
+    cursor: pointer;
+}
+.card.selected{
+    -webkit-box-shadow: -3px 3px 42px -2px rgba(84,111,242,1) !important;
+    -moz-box-shadow: -3px 3px 42px -2px rgba(84,111,242,1) !important;
+    box-shadow: -3px 3px 42px -2px rgba(84,111,242,1) !important;
+}
