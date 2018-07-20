@@ -4,7 +4,8 @@
     Author     : X453SA
 --%>
 
-    <%@page contentType="text/html" pageEncoding="UTF-8"%>
+    <%@page import="java.lang.String"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
         <!DOCTYPE html>
         <html>
@@ -12,7 +13,7 @@
         <head>
             
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-            <title>Deutsche Bahn - Sign Up</title>
+            <title>${sessionScope.htm} </title>
             <link rel="stylesheet" href="source/css/main.css">
             <%@include file="includes/cssimport.jsp" %>
         </head>
@@ -30,9 +31,18 @@
                     <div class="mt-5">
                         <h1>Payment</h1>
                         <h3>Your Total : EUR € ${requestScope.price}</h3>
-                    </div>
-                    <form action="railPassInvoice" method="post" class="md-form ml-3" id="payment" onsubmit="return validateDate()">
-                        <div class="row">
+                    </div>  
+                 <c:choose>
+                    <c:when test="${sessionScope.htm > 1}">
+                        <form action="railPassInvoiceM" method="post" class="md-form ml-3" id="payment" onsubmit="return validateDate()">
+                        </c:when>
+                    <c:otherwise>
+ <form action="railPassInvoice" method="post" class="md-form ml-3" id="payment" onsubmit="return validateDate()">
+    
+                    </c:otherwise>
+                </c:choose>
+            
+                                           <div class="row">
                             <div class="col-md-4">
                                 <select class="mdb-select">
                                     <option value="1" selected>Germany</option>
@@ -136,7 +146,7 @@
                         </div>
                     </form>
                 </div>
-            
+                    
             <%@include file="includes/footer.jsp" %>
             <%@include file="includes/loginmodal.jsp" %>
             <%@include file="includes/scriptimport.jsp" %>

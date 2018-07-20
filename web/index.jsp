@@ -4,7 +4,7 @@
 <html class="full-height">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title><%String serverIP = request.getServerName(); out.print(serverIP);%></title>
         <link rel="stylesheet" href="source/css/index.css">
         <%@include file="includes/cssimport.jsp"%>
     </head>
@@ -34,9 +34,10 @@
             <!-- Mask & flexbox options-->
         </div>
         </header>
-        <main class="text-center py-5 mt-3">
+       <main class="text-center py-5 mt-3">
         <div class="container overlap-header">
-            <form action="book.html" class="md-form pr-3 pl-3" onsubmit="return valindex()" novalidate>
+            <!--<form>-->
+            <form action="book.jsp" method="post" onsubmit="return valindex()" novalidate>
                 <div class="row">
                     <div class="col">
                         <h3 id="searchtik">Search a Ticket</h3>
@@ -79,29 +80,47 @@
                             <option value="2">2 Passenger</option>
                             <option value="3">3 Passenger</option>
                             <option value="4">4 Passenger</option>
-                            <option value="">More than 4 Passenger</option>
+                            <!--<option value="">More than 4 Passenger</option>-->
                         </select>
                         <label>Passenger</label>
                     </div>
                     <div class="col">
                         <div class="md-form">
-                            <input placeholder="Selected date" type="text" id="tanggal_berangkat" class="form-control datepicker">
-                            <label for="tanggal_berangkat">Date of Departure</label>
+                            <input placeholder="Selected date" type="text" id="tanggal_berangkat" name="tanggal_berangkat" class="form-control datepicker">
+                            <label for="date-picker-example">Date of Departure</label>
                         </div>
                     </div>
                     <div class="col">
-                        <button type="submit" class="btn btn-flat btn-lg">Search Trains</button>
+                        <a class="btn btn-flat btn-lg" id="gosearch"><p id="shet">Search a Trains</p></a>
                     </div>
                 </div>
                 <div id="bquote" class="row">
-                    <blockquote class="blockquote bq-success">
-                        <p class="bq-title">Booking more than 4 Passenger ?</p>
-                        <p>To prevent calo from using our online ticketing service, we limit to only 4 passenger per booking, if you want to book a ticket for more than 4 passenger, please go to nearest DB Station and ask the officer there.</p>
-                    </blockquote>
+                                           <table class="table table-responsive-md">
+
+                            <!--Table head-->
+                            <thead class="red lighten-2">
+                                <tr>
+                                    <th>Select</th>
+                                    <th class="th-sm">Ticket ID</th>
+                                    <th class="th-sm">Train Name</th>
+                                    <th class="th-sm">Departure Date</th>
+                                    <th class="th-sm">Departure Time</th>
+                                    <th class="th-sm">Price (EUR)</th>
+                                </tr>
+                            </thead>
+                            <!--Table head-->
+
+                            <!--Table body-->
+                            <tbody id="ajaxputhere">
+
+                            </tbody>
+                            <!--Table body-->
+
+
+                        </table>
                 </div>
             </form>
-        </div>
-    </main>
+       </main>
     <!-- Section: Products v.4 -->
     <div class="view jarallax intro-2" data-jarallax='{"speed": 0.2}' style="background-image: url(source/image/4k_material_red_light-wallpaper-1440x900.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
         <div class="mask rgba-white-slight">
@@ -241,5 +260,30 @@
         <%@include file="includes/footer.jsp" %>
         <%@include file="includes/loginmodal.jsp" %>
         <%@include file="includes/scriptimport.jsp" %>
+                 <script>
+             shitext = $('#shet');
+yombreng = $('div.preloader-wrapper');
+function animet(){
+shitext.text("");
+yombreng.addClass("active");
+}
+    </script>
+            <script>
+                function ale(){
+                  $('#bquote').fadeIn('slow');  
+                };
+            $("#gosearch").click(function(){
+ $('#bquote').fadeOut('slow');  
+               var stdepart=$("#st_from").val(); 
+               var starrive=$("#st_to").val();
+               var d = new Date();
+               var departure=$("#tanggal_berangkat").val();
+               var n = 
+               $.post("select-data.jsp",{std:stdepart,sta:starrive,dpt:departure},function (data){
+                  $("#ajaxputhere").html(data); 
+                $('#bquote').fadeIn('slow');
+               });
+            });
+        </script>
     </body>
 </html>

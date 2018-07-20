@@ -24,6 +24,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact-us.html">Contact-us</a>
                     </li>
+                    <c:choose>
+                    <c:when test="${sessionScope.role == 'admin'}">
+                       <li class="nav-item">
+                        <a class="nav-link" href="crud.jsp">Backend Crud</a>
+                    </li>                    
+                    </c:when>
+                    <c:otherwise>
+                        
+                    </c:otherwise>
+                </c:choose>
+            
                 </ul>
                 <c:choose>
                     <c:when test="${sessionScope.username != null}">

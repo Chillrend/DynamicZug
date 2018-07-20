@@ -80,11 +80,13 @@ public class railPassInvoice extends HttpServlet {
             stmt.setString(9, identification);
 
             int i = stmt.executeUpdate();
-
+            
             if(i>0){
                 ResultSet res = stat.executeQuery("SELECT * FROM invoicepass WHERE inv_id='" + SUUID + "';");
                 while(res.next()){
-                    String suuids = res.getString("inv_id");
+                    String serverIP = request.getLocalAddr();
+                    String suuide = res.getString("inv_id");
+                    String suuids = "http://" + serverIP + ":8080/DynamicZug/activate.jsp?suuid=" + suuide;
                     qrgenerate qrGen = new qrgenerate();
 
                     byte[] qrcode = qrGen.getQr(suuids,50,50);
@@ -111,7 +113,7 @@ public class railPassInvoice extends HttpServlet {
                     }
                     AcroFields form = stamper.getAcroFields();
 
-                    form.setField("uuid",suuids);
+                    form.setField("uuid",suuide);
                     form.setField("PassengerName", passengerName);
                     form.setField("Identification", res.getString("identification"));
                     form.setField("FirstDay", res.getDate("date_start").toString());
@@ -134,8 +136,9 @@ public class railPassInvoice extends HttpServlet {
 
                     response.setContentType("application/pdf");
                     response.getOutputStream().write(((ByteArrayOutputStream)streamToResponse).toByteArray());
-
+               
                 }
+                
             }else{
                 // Do Something if insert fails
             }
