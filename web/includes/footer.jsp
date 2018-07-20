@@ -39,19 +39,19 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 class="text-uppercase font-weight-bold"> <strong>Products</strong> </h6>
                     <hr class="danger-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p> <a href="#!">BahnPass</a> </p>
-                    <p> <a href="features.html">First Class</a> </p>
-                    <p> <a href="#">Bussiness</a> </p>
+                    <p> <a href="railpass.jsp">BahnPass</a> </p>
+                    <p> <a href="features.jsp">First Class</a> </p>
+                    <p> <a href="contact-us.jsp">Bussiness</a> </p>
                 </div>
                 <!--/.Second column-->
                 <!--Third column-->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 class="text-uppercase font-weight-bold"> <strong>Useful links</strong> </h6>
                     <hr class="danger-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p> <a href="" data-toggle="modal" data-target="#darkModalForm">Login</a> </p>
-                    <p> <a href="index.html#searchtik">Book a Ticket</a> </p>
-                    <p> <a href="#">Bahn Pass</a> </p>
-                    <p> <a href="contact-us.html">Contact Us</a> </p>
+                    <p> <a href="" data-toggle="modal" data-target="#elegantModalForm">Login</a> </p>
+                    <p> <a href="index.jsp#searchtik">Book a Ticket</a> </p>
+                    <p> <a href="railpass.jsp">Bahn Pass</a> </p>
+                    <p> <a href="contact-us.jsp">Contact Us</a> </p>
                 </div>
                 <!--/.Third column-->
                 <!--Fourth column-->
@@ -68,6 +68,6 @@
         </div>
         <!--/.Footer Links-->
         <!-- Copyright-->
-        <div class="footer-copyright py-3 text-center">Best viewed with 1366x768px Display Resolution <br /> © 2018 Copyright: <a> <strong> Deutsche Bahn AG</strong> </a> </div>
+        <div class="footer-copyright py-3 text-center">Best viewed with 1366x768px Display Resolution <br /> &copy; 2018 Copyright: <a> <strong> Deutsche Bahn AG</strong> </a> </div>
         <!--/.Copyright -->
 </footer>

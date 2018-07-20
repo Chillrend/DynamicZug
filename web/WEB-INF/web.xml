@@ -52,6 +52,13 @@
         <servlet-name>railPassInvoiceM</servlet-name>
         <servlet-class>com.chillrend.zugticket.railPassInvoiceM</servlet-class>
     </servlet>
+        <servlet-name>printPass</servlet-name>
+        <servlet-class>com.chillrend.zugticket.printPass</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>printPass</servlet-name>
+        <url-pattern>/printPass</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>railPassInvoice</servlet-name>
         <url-pattern>/railPassInvoice</url-pattern>

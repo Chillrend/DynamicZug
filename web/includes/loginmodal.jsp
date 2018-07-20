@@ -42,13 +42,6 @@
         <!--/.Content-->
     </div>
 </div>
-<!-- Modal -->
-<!-- Card -->
-
-<!-- Button trigger modal -->
-
-
-<!-- Modal -->
 <div class="modal fade" id="loggedmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -60,7 +53,9 @@
                                 <div class="card-up red lighten-1">
                                 </div>
                                 <div class="avatar mx-auto white">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle">
+                                    <form action="imagedisplay" method="get">
+                                        <img src="imagedisplay?username=${sessionScope.username}" class="rounded-circle">
+                                    </form>
                                 </div>
                                 <div class="card-body">
                                     <h4 class="card-title">${sessionScope.username}</h4>
@@ -70,7 +65,7 @@
                                         <div class="text-center">
                                             <button class="btn btn-danger btn-sm" data-dismiss="modal"><i class="fa fa-window-close"></i> Close</button>
                                             <button class="btn btn-danger btn-sm" id="logout"><i class="fa fa-sign-out"></i> Logout</button>
-                                            <button class="btn btn-danger btn-sm" id="logout"><i class="fa fa-user"></i> Profile</button>
+                                            <a href="profile.jsp"><button class="btn btn-danger btn-sm" id="profile"><i class="fa fa-user"></i> Profile</button></a>
                                         </div>
                                     </p>
                                 </div>

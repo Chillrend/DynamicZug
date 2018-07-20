@@ -5,12 +5,12 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@include file="includes/dbimport.jsp" %>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Deutsche Bahn - Rail Pass</title>
     <link rel="stylesheet" href="source/css/main.css">
@@ -18,12 +18,29 @@
 </head>
 
 <body>
+<%@include file="includes/dbconnect.jsp" %>
 <%@include file="includes/header.jsp" %>
 <script>
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
+<c:choose>
+    <c:when test="${sessionScope.username != null}">
+
+    </c:when>
+    <c:otherwise>
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                toastr["warning"]("You Havent logged-in, please log-in first to book rail-pass");
+                window.setTimeout(function () {
+                    window.location.href = "index.jsp";
+                }, 3000);
+            });
+        </script>
+    </c:otherwise>
+</c:choose>
 <div class="container mt-5 mb-5">
     <!-- Extended material form grid -->
     <div class="row mt-5"></div>
@@ -134,8 +151,13 @@
             <!-- Grid column -->
             <div class="col-md-12">
                 <!-- Material input -->
+                <sql:query dataSource = "${snapshot}" var = "result">
+                    SELECT name FROM user WHERE username='${sessionScope.username}';
+                </sql:query>
                 <div class="md-form form-group">
-                    <input type="text" class="form-control" id="inputpassengername" name="inputName" required>
+                    <c:forEach var = "row" items = "${result.rows}">
+                    <input type="text" class="form-control" id="inputpassengername" name="inputName" required readonly="readonly" value="${row.name}">
+                    </c:forEach>
                     <label for="inputpassengername">Passenger Name</label>
                 </div>
             </div>
@@ -274,7 +296,7 @@
                     <option value="Kenya">Kenya</option>
                     <option value="Kiribati">Kiribati</option>
                     <option value="Korea North">Korea North</option>
-                    <option value="Korea Sout">Korea South</option>
+                    <option value="Korea South">Korea South</option>
                     <option value="Kuwait">Kuwait</option>
                     <option value="Kyrgyzstan">Kyrgyzstan</option>
                     <option value="Laos">Laos</option>

@@ -23,9 +23,10 @@
     <c:otherwise>
         <script type="text/javascript">
             $(document).ready(function () {
-                // Handler for .ready() called.
-                alert("You haven't Logged in, please login first");
-                window.location.href = "index.jsp";
+                toastr["warning"]("You Havent logged-in, please log-in first to book rail-pass");
+                window.setTimeout(function () {
+                    window.location.href = "index.jsp";
+                }, 3000);
             });
         </script>
     </c:otherwise>
@@ -128,6 +129,34 @@
                                 <th>Schedules</th>
                             </tr>
                             </thead>
+                        </table>
+                        <h2>Your Railpass</h2>
+                        <table id="railpasstable" class="table">
+                            <thead class="red lighten-1">
+                            <tr>
+                                <th>Railpass ID</th>
+                                <th>Pass Name</th>
+                                <th>Date Start, End</th>
+                                <th>Print Pass</th>
+                            </tr>
+                            </thead>
+                            <sql:query dataSource="${snapshot}" var="result">
+                                SELECT * FROM invoicepass WHERE username="${sessionScope.username}";
+                            </sql:query>
+                            <c:forEach var="row" items="${result.rows}">
+                                <tr>
+                                    <td>${row.inv_id}</td>
+                                    <c:set var="passName" value="${row.pass_id}"></c:set>
+                                    <sql:query dataSource="${snapshot}" var="resultname">
+                                        SELECT * FROM railpass WHERE id="${passName}";
+                                    </sql:query>
+                                    <c:forEach var="rew" items="${resultname.rows}">
+                                        <td>${rew.name}</td>
+                                    </c:forEach>
+                                    <td>${row.date_start}, ${row.date_end}</td>
+                                    <td><a href="printPass?id=${row.inv_id}" class="btn btn-sm btn-danger">Print</a></td>
+                                </tr>
+                            </c:forEach>
                         </table>
                     </div>
                     <!--/.Panel 2-->

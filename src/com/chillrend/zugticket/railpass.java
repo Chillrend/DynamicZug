@@ -36,15 +36,6 @@ public class railpass extends HttpServlet {
             E.printStackTrace();
         }
 
-//        railpasscontainer varContain = new railpasscontainer();
-
-//        varContain.setPassName(passName);
-//        varContain.setDays(days);
-//        varContain.setPassengerName(passengerName);
-//        varContain.setIdentification(identification);
-//        varContain.setCountryOrigin(countryOrigin);
-//        varContain.setDateStart(dateStart);
-
         HttpSession sess = request.getSession();
         sess.setAttribute("passName", passName);
         sess.setAttribute("days", days);

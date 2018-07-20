@@ -223,7 +223,7 @@
                             <div>
                                 <h6 class="red-text"> <i class="fa fa-phone"></i> <strong> Customer Service</strong> </h6>
                                 <h3 class="py-3 font-weight-bold"> <strong>Bahn Dedicated Service Line</strong> </h3>
-                                <p class="pb-3">DB Offer number on quality service center ! If you want to book a ticket, check your booking status, or have a problem regarding our train services, feel free to contact us by clicking the button below! </p> <a href="contact-us.html" class="btn btn-danger btn-rounded btn-md"><i class="fa fa-clone left"></i> Contact us</a> </div>
+                                <p class="pb-3">DB Offer number on quality service center ! If you want to book a ticket, check your booking status, or have a problem regarding our train services, feel free to contact us by clicking the button below! </p> <a href="contact-us.jsp" class="btn btn-danger btn-rounded btn-md"><i class="fa fa-clone left"></i> Contact us</a> </div>
                         </div>
                     </div>
                 </div>
@@ -235,7 +235,7 @@
                             <div>
                                 <h6 class="red-text"> <i class="fa fa-hourglass"></i> <strong> Timeliness</strong> </h6>
                                 <h3 class="py-3 font-weight-bold"> <strong>Zero Time Punctuation</strong> </h3>
-                                <p class="pb-3">We offer a refund if a train is delayed, cancelled, or you missed a connecting train</p> <a href="claim.html" class="btn btn-danger btn-rounded btn-md"><i class="fa fa-clone left"></i> Refund</a> </div>
+                                <p class="pb-3">We offer a refund if a train is delayed, cancelled, or you missed a connecting train</p> <a href="claim.jsp" class="btn btn-danger btn-rounded btn-md"><i class="fa fa-clone left"></i> Refund</a> </div>
                         </div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@
                             <div>
                                 <h6 class="red-text"> <i class="fa fa-bed"></i> <strong> Comfort</strong></h6>
                                 <h3 class="py-3 font-weight-bold"> <strong>First Class Service</strong></h3>
-                                <p class="pb-3">First class airplane like service, offer you a comfortable ride on even twelve-hours train ride. Experience Top-class service with DB. </p> <a href="features.html" class="btn btn-danger btn-rounded btn-md"><i class="fa fa-clone left"></i> First Class Facility</a> </div>
+                                <p class="pb-3">First class airplane like service, offer you a comfortable ride on even twelve-hours train ride. Experience Top-class service with DB. </p> <a href="features.jsp" class="btn btn-danger btn-rounded btn-md"><i class="fa fa-clone left"></i> First Class Facility</a> </div>
                         </div>
                     </div>
                 </div>

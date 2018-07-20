@@ -39,7 +39,6 @@ public class railPassInvoice extends HttpServlet {
     PdfStamper stamper;
     OutputStream streamToResponse = new ByteArrayOutputStream();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        railpasscontainer varContainer = new railpasscontainer();
 
         session = request.getSession();
 
